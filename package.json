@@ -7,6 +7,12 @@
     "start": "webpack-dev-server --open",
     "create": "webpack"
   },
+  "babel": {
+  "presets": [
+    "env",
+    "react"
+  ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kirbygit/react-challenges.git"

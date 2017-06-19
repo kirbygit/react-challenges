@@ -1,5 +1,5 @@
 var React = require('react');
-var ReactDom = require('react-dom');
+var ReactDOM = require('react-dom');
 var PropTypes = require('prop-types');
 require('./props5.css');
 
@@ -13,21 +13,24 @@ class Users extends React.Component {
         return name.friend === false;
       });
 
-      const friendList = friends.map(function (person) {
-        return (
-          <li key={person.name}>
-             {person.name}
-           </li>
-         );
-      });
+      const friendList = friends.map(person => <li>{person.name}</li>);
 
-      const nonFriendList = nonFriends.map (function (person) {
-        return (
-          <li key={person.name}>
-             {person.name}
-           </li>
-         );
-      });
+      const nonFriendList = nonFriends.map(person => <li>{person.name}</li>);
+      // const friendList = friends.map(function (person) {
+      //   return (
+      //     <li key={person.name}>
+      //        {person.name}
+      //      </li>
+      //    );
+      // });
+
+      // const nonFriendList = nonFriends.map (function (person) {
+      //   return (
+      //     <li key={person.name}>
+      //        {person.name}
+      //      </li>
+      //    );
+      // });
 
     return (
       <div>
@@ -58,8 +61,8 @@ User.propTypes = {
 
 ReactDOM.render(
   <Users list={[
-    { name: 'Tyler', friend: true },
-    { name: 'Ryan', friend: true },
+    { name: 'Kirby', friend: true },
+    { name: 'James', friend: true },
     { name: 'Michael', friend: false },
     { name: 'Mikenzi', friend: false },
     { name: 'Jessica', friend: true },
